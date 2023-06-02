@@ -23,4 +23,14 @@ class MainViewModel @Inject constructor(
     private fun loadCryptoCurrency() {
         cryptoCurrencyEmitter.value = cryptocurrencyRepository.getCryptoCurrency()
     }
+
+    fun filterList(cryptoName: String) {
+        if (cryptoName.isNotEmpty()) {
+            cryptoCurrencyEmitter.value = cryptoCurrencyEmitter.value?.filter {
+                it.name.contains(cryptoName)
+            }
+        } else {
+            cryptoCurrencyEmitter.value = cryptocurrencyRepository.getCryptoCurrency()
+        }
+    }
 }

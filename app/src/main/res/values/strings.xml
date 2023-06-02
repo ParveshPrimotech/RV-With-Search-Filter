@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MyApp</string>
     <string name="filter_list">Filter list</string>
+    <string name="ascending_order">Ascending order</string>
+    <string name="descending_order">Descending order</string>
+    <string name="DialogTheme" />
 </resources>
