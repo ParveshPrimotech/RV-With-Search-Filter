@@ -4,4 +4,6 @@
     <string name="ascending_order">Ascending order</string>
     <string name="descending_order">Descending order</string>
     <string name="DialogTheme" />
+    <string name="ascending">ASCENDING</string>
+    <string name="decending">DESCENDING</string>
 </resources>
