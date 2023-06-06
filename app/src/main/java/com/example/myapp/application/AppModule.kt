@@ -1,7 +1,7 @@
 package com.example.myapp.application
 
-import com.example.myapp.ui.main.CryptoCurrencyRepoImpl
-import com.example.myapp.repository.CryptocurrencyRepository
+import com.example.myapp.ui.main.home.CryptoCurrencyRepoImpl
+import com.example.myapp.repository.CryptoRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,5 +12,7 @@ import dagger.hilt.components.SingletonComponent
 class AppModule {
 
     @Provides
-    fun provideCryptoCurrencyRepository(): CryptocurrencyRepository = CryptoCurrencyRepoImpl()
+    fun provideCryptoCurrencyRepository(): CryptoRepository = CryptoCurrencyRepoImpl()
+
+
 }

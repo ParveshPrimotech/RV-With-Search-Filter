@@ -5,15 +5,15 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.myapp.model.Cryptocurrency
-import com.example.myapp.repository.CryptocurrencyRepository
-import com.example.myapp.ui.main.Order
+import com.example.myapp.repository.CryptoRepository
+import com.example.myapp.ui.main.home.Order
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
 import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val cryptocurrencyRepository: CryptocurrencyRepository
+    private val cryptocurrencyRepository: CryptoRepository
 ) : ViewModel() {
 
     private val cryptoCurrencyEmitter = MutableLiveData<List<Cryptocurrency>>()

@@ -1,11 +1,7 @@
-package com.example.myapp.ui.main
+package com.example.myapp.ui.main.home
 
 import android.app.AlertDialog
-import android.app.Dialog
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.activity.viewModels
@@ -14,13 +10,11 @@ import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapp.R
 import com.example.myapp.databinding.ActivityMainBinding
-import com.example.myapp.databinding.CryptoListOrderBinding
 import com.example.myapp.model.Cryptocurrency
-import com.example.myapp.repository.CryptocurrencyRepository
+import com.example.myapp.repository.CryptoRepository
 import com.example.myapp.viewModel.MainViewModel
 import com.example.myapp.viewModel.Search
 import dagger.hilt.android.AndroidEntryPoint
-
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -30,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     
     var alertDialog: AlertDialog ?=null
 
-    private var cryptoAdapter : CryptoListAdapter  = CryptoListAdapter()
+    private var cryptoAdapter : CryptoListAdapter = CryptoListAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +76,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-class CryptoCurrencyRepoImpl : CryptocurrencyRepository {
+class CryptoCurrencyRepoImpl : CryptoRepository {
     private val list = listOf(
         Cryptocurrency("bnb"),
         Cryptocurrency("bitcoin"),
@@ -119,14 +113,3 @@ enum class Order{
     ASCENDING,
     DESCEDING
 }
-
-/*
- private var dialogBinding : CryptoListOrderBinding ?=null
- private var dialogView : View?=null
- var mDialog : Dialog ?=null
- 
- dialogBinding = CryptoListOrderBinding.inflate(LayoutInflater.from(this))
- mDialog = Dialog(this@MainActivity,R.style.DialogTheme)
- mDialog?.setCancelable(true)
- dialogView = dialogBinding?.root
- mDialog?.setContentView(dialogView!!)*/
