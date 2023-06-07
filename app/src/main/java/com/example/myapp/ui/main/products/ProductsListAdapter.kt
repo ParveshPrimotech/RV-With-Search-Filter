@@ -12,7 +12,7 @@ import com.bumptech.glide.RequestManager
 import com.example.myapp.R
 import com.example.myapp.databinding.LayoutProductsBinding
 import com.example.myapp.model.ProductModelItem
-import com.example.myapp.ui.main.capitalize
+import com.example.myapp.capitalize
 
 class ProductsListAdapter(var context: Context,val itemClick :(Int) -> Unit) :
     ListAdapter<ProductModelItem, ProductsListAdapter.ViewHolder>(UserDiffCallBack()){

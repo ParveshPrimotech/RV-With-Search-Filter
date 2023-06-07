@@ -8,4 +8,12 @@
     <string name="decending">DESCENDING</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="submit">Submit</string>
+
+    <string name="name_empty_validate">Name should not be null or empty</string>
+    <string name="name_length_validate">Name should not be less then 8</string>
+    <string name="email_empty_validate">Email should not be empty or null</string>
+    <string name="email_matcher_failed">Please enter valid email</string>
+    <string name="password_empty_validation">Password should not be null or empty</string>
+    <string name="password_length_validation">Password should not less then 8 digits</string>
 </resources>

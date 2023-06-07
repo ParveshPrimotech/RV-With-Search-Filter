@@ -12,6 +12,7 @@ import com.example.myapp.model.ProductModelItem
 import com.example.myapp.network.ApiConstant
 import com.example.myapp.repository.MainRepository
 import com.example.myapp.ui.main.productDetails.ProductDetailsActivity
+import com.example.myapp.ui.main.signup.SignupActivity
 import com.example.myapp.viewModel.ProductsViewModel
 import com.example.myapp.viewModel.ViewModelFactory
 import kotlinx.coroutines.CoroutineScope
@@ -38,7 +39,7 @@ class ProductsActivity : AppCompatActivity() {
             context = applicationContext,
             itemClick = { position ->
                 startActivity(
-                    Intent(applicationContext, ProductDetailsActivity::class.java).apply {
+                    Intent(applicationContext, SignupActivity::class.java).apply {
                         putExtra("position", position)
                     })
             }

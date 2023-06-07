@@ -16,10 +16,15 @@ class MainViewModel @Inject constructor(
     private val cryptocurrencyRepository: CryptoRepository
 ) : ViewModel() {
 
+   /* val validateEmail = Validate()
+    val result =  validateEmail.validate("dssfsf")
+    None,
+    INvalid_EMail,
+    MIn_Length_eror*/
+
     private val cryptoCurrencyEmitter = MutableLiveData<List<Cryptocurrency>>()
     val cryptoCurrency: LiveData<List<Cryptocurrency>> = cryptoCurrencyEmitter
     private var searchJob: Job? = null
-
     private var searchState : Search = Search.InitialState
 
     init {
@@ -49,6 +54,7 @@ class MainViewModel @Inject constructor(
                 order = order
             )
             performSearch()
+
         }
     }
 
